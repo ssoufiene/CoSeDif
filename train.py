@@ -115,7 +115,7 @@ def main():
     model, optimizer, data_loader = accelerator.prepare(
         model, optimizer, data_loader
     )
-    diffusion = MedSegDiff(
+    diffusion = CoSeDif(
         model,
         timesteps=args.timesteps
     ).to(accelerator.device)
